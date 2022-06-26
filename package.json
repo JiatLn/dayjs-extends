@@ -1,0 +1,48 @@
+{
+  "name": "dayjs-extends",
+  "type": "module",
+  "version": "0.0.5",
+  "author": {
+    "name": "jiatln",
+    "email": "lne128gene980@163.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dayjs"
+  ],
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.js",
+      "import": "./lib/index.js"
+    }
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/*",
+        "./lib/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "pub": "npm publish",
+    "typecheck": "tsc --noEmit",
+    "play": "node playground/index.js"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "dayjs": "^1.11.3",
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4"
+  }
+}
