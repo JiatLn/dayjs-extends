@@ -1,15 +1,37 @@
-import type { Dayjs } from 'dayjs'
 import dayjs from 'dayjs'
+import type { DateLike, DateRandom } from './types'
 
-declare module 'dayjs' {
-  function init(): string
-  function between(start: string | Date, end: string | Date): dayjs.Dayjs
-
+function between(start: DateLike, end: DateLike) {
+  const startDate = dayjs(end).valueOf()
+  const endDate = dayjs(start).valueOf()
+  const dateDelta = endDate - startDate
+  const randomDate = Math.floor(Math.random() * dateDelta + 1)
+  return dayjs(startDate + randomDate)
 }
 
-export default (day: typeof dayjs) => {
-  dayjs.between = (from: string | Date, to: string | Date): Dayjs => {
-    return day(from).isBefore(to) ? day(from) : day(to)
+class DayjsExt {
+  random: DateRandom
+  constructor() {
+    this.random = {
+      between,
+    }
   }
-  dayjs.init = () => 'Dayjs extends init.'
+
+  sayHi(): string {
+    return 'hello, dayjs extends!'
+  }
+
+  /**
+   * get now date
+   */
+  getToday(template?: string) {
+    template = template || 'YYYY-MM-DD'
+    return dayjs().format(template)
+  }
+}
+/**
+ * Return `DayjsExt` Instance
+ */
+export default function dayjsExt() {
+  return new DayjsExt()
 }
