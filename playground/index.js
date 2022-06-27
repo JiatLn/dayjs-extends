@@ -1,9 +1,8 @@
-import dayjs from 'dayjs'
-import DayjsExtends from '../lib/index.js'
+import dayjsExt from '../lib/index.js'
 
-dayjs.extend(DayjsExtends)
+const de = dayjsExt()
 
-const text = dayjs.init()
-console.log('==============')
-console.log(text)
-console.log('==============')
+const date1 = de.random.between('2018-01-01', '2018-01-31').format('YYYY-MM-DD')
+const date2 = de.getToday()
+const date3 = de.sayHi()
+console.table([date1, date2, date3])

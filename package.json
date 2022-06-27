@@ -1,14 +1,17 @@
 {
   "name": "dayjs-extends",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "description": "Dayjs but not only Day.js",
   "author": {
     "name": "jiatln",
     "email": "lne128gene980@163.com"
   },
   "license": "MIT",
+  "homepage": "https://github.com/jiatln/dayjs-extends",
   "keywords": [
-    "dayjs"
+    "dayjs",
+    "dayjs-extends"
   ],
   "exports": {
     ".": {

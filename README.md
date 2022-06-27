@@ -10,11 +10,8 @@ npm i dayjs-extends
 
 
 ```js
-import dayjs from 'dayjs'
-import DayjsExtends from 'dayjs-extends'
+import dayjsExt from 'dayjs-extends'
 
-dayjs.extend(DayjsExtends)
-
-const itWord = dayjs.init()
-console.log(itWord) // Dayjs extends init.
+const de = dayjsExt()
+console.log(de.sayHi()) // hello, dayjs extends!
 ```
