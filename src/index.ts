@@ -28,6 +28,19 @@ class DayjsExt {
     template = template || 'YYYY-MM-DD'
     return dayjs().format(template)
   }
+
+  /**
+   * get month start and end date with a date (default is now)
+   */
+  getMonthRange(date?: DateLike, template = 'YYYY-MM-DD'): [DateLike, DateLike] {
+    date = dayjs(date)
+    const year = date.year()
+    const month = date.month()
+    const endDay = date.daysInMonth()
+    const d1 = new Date(year, month, 1)
+    const d2 = new Date(year, month, endDay)
+    return [dayjs(d1).format(template), dayjs(d2).format(template)]
+  }
 }
 /**
  * Return `DayjsExt` Instance
