@@ -38,7 +38,7 @@
     "build": "tsc",
     "pub": "npm publish",
     "typecheck": "tsc --noEmit",
-    "play": "node playground/index.js"
+    "test": "vitest"
   },
   "dependencies": {
     "dayjs": "^1.11.3"
@@ -48,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "vitest": "^0.16.0"
   }
 }
