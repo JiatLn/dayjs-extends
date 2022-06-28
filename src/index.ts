@@ -41,6 +41,25 @@ class DayjsExt {
     const d2 = new Date(year, month, endDay)
     return [dayjs(d1).format(template), dayjs(d2).format(template)]
   }
+
+  /**
+   * get a date that is one date before or after delta days
+   */
+  getDateWithDelta(date: DateLike, delta: number, template = 'YYYY-MM-DD'): DateLike {
+    return dayjs(date).add(delta, 'day').format(template)
+  }
+
+  /**
+   * The number of days between two dates
+   * @param date1 date like `2022/06/12`
+   * @param date2  date like `2022/06/18`
+   * @returns number of days
+   */
+  getTwoDateDeltaDay(date1: DateLike, date2: DateLike): number {
+    const dateOne = dayjs(date1).unix()
+    const dateTwo = dayjs(date2).unix()
+    return Math.ceil(Math.abs(dateOne - dateTwo) / (86400))
+  }
 }
 /**
  * Return `DayjsExt` Instance
