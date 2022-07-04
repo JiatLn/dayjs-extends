@@ -1,7 +1,7 @@
 {
   "name": "dayjs-extends",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "Dayjs but not only Day.js",
   "author": {
     "name": "jiatln",
@@ -9,6 +9,13 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/jiatln/dayjs-extends",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JiatLn/dayjs-extends.git"
+  },
+  "publishConfig": {
+    "@jiatln:registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "dayjs",
     "dayjs-extends"
