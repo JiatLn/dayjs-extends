@@ -1,7 +1,7 @@
 {
   "name": "dayjs-extends",
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.0.9",
   "description": "Dayjs but not only Day.js",
   "author": {
     "name": "jiatln",
